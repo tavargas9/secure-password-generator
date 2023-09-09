@@ -7,7 +7,6 @@ function generatePassword(length, useLowercase, useUppercase, useNumeric, useSpe
   var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numericChars = "0123456789";
   var specialChars = "!@#$%^&*()_+[]{}|;:,.<>?";
-
   var characters = "";
 
   if (useLowercase) {
@@ -29,18 +28,15 @@ function generatePassword(length, useLowercase, useUppercase, useNumeric, useSpe
 
   var randomPassword = "";
 
-for (var i = 0; i < length; i++) {
-  
-  var randomIndex = Math.floor(Math.random() * characters.length);
-  
-  randomPassword += characters.charAt(randomIndex);
-}
+  for (var i = 0; i < length; i++) {
+    var randomIndex = Math.floor(Math.random() * characters.length);
+    randomPassword += characters.charAt(randomIndex);
+  }
 
-return randomPassword;
+  return randomPassword;
 }
 
 function writePassword() {
-
   var userInput = prompt("Enter the desired password length (# of characters):");
   var passwordLength = parseInt(userInput);
 
