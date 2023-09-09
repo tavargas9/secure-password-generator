@@ -18,8 +18,7 @@ return randomPassword;
 }
 
 function writePassword() {
-
-
+  
   var userInput = prompt("Enter the desired password length:");
   var passwordLength = parseInt(userInput);
 
