@@ -18,16 +18,16 @@ return randomPassword;
 }
 
 function writePassword() {
-  
+
   var userInput = prompt("Enter the desired password length:");
   var passwordLength = parseInt(userInput);
 
-  if (!isNaN(passwordLength) && passwordLength > 8 && passwordLength < 128){
+  if (!isNaN(passwordLength) && passwordLength > 7 && passwordLength < 129){
     var password = generatePassword(passwordLength);
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
   } else {
-    alert("Invalid input. Please enter a positive number between 8 and 128 for password length")
+    alert("Invalid input. Please enter a positive number (must be at least 8 characters and no more than 128 characters) for password length")
   }
 }
 
