@@ -22,7 +22,6 @@ function generatePassword(length, useLowercase, useUppercase, useNumeric, useSpe
   if (useSpecial) {
     characters += specialChars;
   }
-
   if (characters === "") {
     alert("No character types selected. Please select at least one character type.");
     return "";
@@ -34,7 +33,6 @@ for (var i = 0; i < length; i++) {
   
   var randomIndex = Math.floor(Math.random() * characters.length);
   
-  
   randomPassword += characters.charAt(randomIndex);
 }
 
@@ -43,14 +41,14 @@ return randomPassword;
 
 function writePassword() {
 
-  var userInput = prompt("Enter the desired password length:");
+  var userInput = prompt("Enter the desired password length (# of characters):");
   var passwordLength = parseInt(userInput);
 
   if (!isNaN(passwordLength) && passwordLength > 7 && passwordLength < 129){
-    var useLowercase = confirm("Include lowercase characters?");
-    var useUppercase = confirm("Include uppercase characters?");
-    var useNumeric = confirm("Include numeric characters?");
-    var useSpecial = confirm("Include special characters?");
+    var useLowercase = confirm("Include lowercase characters? (OK for yes, CANCEL for no)");
+    var useUppercase = confirm("Include uppercase characters? (OK for yes, CANCEL for no)");
+    var useNumeric = confirm("Include numeric characters? (OK for yes, CANCEL for no)");
+    var useSpecial = confirm("Include special characters? (OK for yes, CANCEL for no)");
 
     var password = generatePassword(passwordLength, useLowercase, useUppercase, useNumeric, useSpecial);
     var passwordText = document.querySelector("#password");
