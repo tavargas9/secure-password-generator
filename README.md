@@ -6,7 +6,7 @@ This is a random and secure password generator built using HTML, CSS, and vanill
 
 ## Installation
 
-Head over to the link to see the deployed web app ----> 
+Head over to the link to see the deployed web app ----> <a href="https://tavargas9.github.io/secure-password-generator/">https://tavargas9.github.io/secure-password-generator/</a> 
 
 ## Usage
 
